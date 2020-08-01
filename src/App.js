@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import Menu from "./Components/Menu";
-import dadosIniciais from "./data/dados_iniciais.json";
+import dadosIniciais from "./data/meus_dados.json";
 import BannerMain from "./Components/BannerMain";
 import Carousel from "./Components/Carousel";
 import "./Styles/Layouts.css";
+import { FooterBase } from "./Components/Footer/styles";
 
 const AppWrapped = styled.div`
   background-color: #141414;
@@ -31,6 +32,13 @@ function App() {
       <Carousel category={dadosIniciais.categorias[4]} />
 
       <Carousel category={dadosIniciais.categorias[5]} />
+
+      <Carousel category={dadosIniciais.categorias[6]} />
+
+      <FooterBase>
+        &copy; Debora Almeida 2020. Orgulhosamente criado durante a{" "}
+        <a href="https://www.alura.com.br/">Imersão React</a> da Alura!
+      </FooterBase>
     </AppWrapped>
   );
 }
